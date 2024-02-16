@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">navexample</string>
+    <string name="company_name">CitiBanamex</string>
+
+    <string name="frankendroid_route">Frankendroid</string>
+    <string name="pumpkin_route">Pumpkin</string>
+    <string name="ghost_route">Ghost</string>
+    <string name="scary_bag_route">ScaryBag</string>
+
+</resources>
