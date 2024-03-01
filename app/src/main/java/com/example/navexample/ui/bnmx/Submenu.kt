@@ -165,17 +165,7 @@ private fun SpookyAppBottomNavigation(
     }
 
 }
-//
-//@Composable
-//fun RowScope.AddItem(screen: BottomNavigationScreens) {
-//
-//    NavigationBarItem(selected = true, onClick = { /*TODO*/ }, icon = {
-//        Icon(
-//            screen.icon, contentDescription = "screen."
-//        )
-//
-//    })
-//}
+
 
 @Composable
 private fun currentRoute(navController: NavHostController): String? {

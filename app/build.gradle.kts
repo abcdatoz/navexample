@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("dagger.hilt.android.plugin")
+    id("kotlin-kapt")
 }
 
 android {
@@ -30,11 +32,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
@@ -50,8 +52,9 @@ android {
 }
 
 dependencies {
-    implementation("androidx.tv:tv-material:1.0.0-alpha10")
     val nav_version = "2.5.3"
+
+    implementation("androidx.tv:tv-material:1.0.0-alpha10")
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
     implementation("androidx.activity:activity-compose:1.8.2")
@@ -63,6 +66,23 @@ dependencies {
     implementation("androidx.compose.material3:material3-window-size-class:1.0.0-alpha12")
 
     implementation("androidx.navigation:navigation-compose:$nav_version")
+
+    //retrofit 2
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    //coil
+    implementation ("io.coil-kt:coil-compose:1.4.0")
+
+    //viewmodel
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1")
+
+    //dagger hilt
+    implementation ("com.google.dagger:hilt-android:2.43.2")
+    implementation ("androidx.hilt:hilt-navigation-compose:1.0.0-rc01")
+    kapt("com.google.dagger:hilt-android-compiler:2.43.2")
+
+
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")

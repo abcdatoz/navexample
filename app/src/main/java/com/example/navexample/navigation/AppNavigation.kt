@@ -15,6 +15,8 @@ import com.example.navexample.ui.bnmx.SignIn
 import com.example.navexample.ui.bnmx.WelcomeLogo
 import com.example.navexample.ui.bnmx.WelcomeMenu
 import com.example.navexample.ui.bnmx.WelcomeName
+import com.example.navexample.ui.book.BookViewModel
+import com.example.navexample.ui.book.BooksScreen
 
 @Composable
 fun AppNavigation() {
@@ -46,6 +48,7 @@ fun AppNavigation() {
             SignIn(navController)
         }
 
+
         composable (
             route = AppScreens.AcercaDe.route
         ){
@@ -66,6 +69,10 @@ fun AppNavigation() {
 
         composable(route = AppScreens.AvisoPrivacidad.route){
             AvisoPrivacidad(navController)
+        }
+
+        composable(route =  AppScreens.Books.route){
+            BooksScreen(navController)
         }
 
     }

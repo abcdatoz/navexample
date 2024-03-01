@@ -12,6 +12,8 @@ sealed class AppScreens (val route: String){
     object Faq: AppScreens("faq")
     object TerminosYCondiciones :AppScreens("terminos_y_condiciones")
     object AvisoPrivacidad:AppScreens("aviso_privacidad")
+
+    object Books: AppScreens ("books")
 }
 
 

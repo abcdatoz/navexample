@@ -53,7 +53,7 @@ sealed class OpcionesAbout(
     object opcA : OpcionesAbout("Operaciones Disponibles", Icons.Filled.ThumbUp, AppScreens.OperacionesDisponibles.route)
     object opcB : OpcionesAbout("FAQ", Icons.Filled.Star, AppScreens.Faq.route)
     object opcC : OpcionesAbout("Terminos y Condiciones", Icons.Filled.Notifications,AppScreens.TerminosYCondiciones.route)
-    object opcD : OpcionesAbout("Aviso de Provacidad", Icons.Filled.Send, AppScreens.AvisoPrivacidad.route)
+    object opcD : OpcionesAbout("Aviso de Provacidad", Icons.Filled.Send, AppScreens.Books.route)
 }
 
 
